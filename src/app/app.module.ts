@@ -2,10 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { GdriveComponent } from './gdrive/gdrive.component';
 import {AppRoutingModule} from './app-routing.module';
 import {ProductStoreModule} from './product-store/product-store.module';
 import {AdministrationModule} from './administration/administration.module';
+import {CoreModule} from './core/core.module';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import {AdministrationModule} from './administration/administration.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ProductStoreModule
+    ProductStoreModule,
+    CoreModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent],

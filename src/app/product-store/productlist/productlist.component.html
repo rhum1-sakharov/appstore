@@ -1,3 +1,7 @@
-<p>
-  productlist works!
-</p>
+<div *ngIf="produits$ | async as produits">
+ <div *ngFor="let p of produits">
+
+   <pre>{{p | json}}</pre>
+ </div>
+</div>
+
